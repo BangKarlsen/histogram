@@ -1,0 +1,22 @@
+body {
+    font: 10px sans-serif;
+    padding-top: 100px;
+}
+.spacing {
+    padding-top: 40px;
+    border-top: 1px solid black;
+}
+.bar rect {
+    /*fill: steelblue;*/
+    fill: rgb(192, 212, 17);
+    shape-rendering: crispEdges;
+}
+.bar text {
+    fill: white;
+    font-size: 10px;
+}
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
