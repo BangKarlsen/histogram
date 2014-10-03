@@ -18,6 +18,9 @@
             <div class="col-md-4">
                 <p>Please enter input data in the field below.</p>
                 <input id="numbers" value="0, 2, 14, 6, 8"></input>
+                <p>
+                    <small>Note, that currently an empty value after a ',' is parsed as a 0.</small>
+                </p>
             </div>
             <div class="col-md-8">
                 <div id="histogram"></div>
@@ -27,8 +30,7 @@
 
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="histogram.js">
-    </script>
+    <script src="histogram.js"></script>
 </body>
 
 </html>

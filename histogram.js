@@ -10,8 +10,14 @@ function updateHistogram() {
 }
 
 function getInputData() {
-    var values = d3.select("#numbers").property("value")
+    /* Simple parsing of the input string. This should be improved
+    to sanitize data to remove extra commas, letters, and other invalid input. */
+    var values = d3.select("#numbers").property("value");
     values = values.split(",").map(Number);
+
+    /* The number of bins in the histogram is currently
+    set to the number of values. Alternatively, a slider could have
+    been shown to let the user control the number of bins. */
     var bins = d3.max(values) + 1;
     return {
         values: values,
