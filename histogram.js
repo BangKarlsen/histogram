@@ -11,7 +11,7 @@ function updateHistogram() {
 
 function getInputData() {
     /* Simple parsing of the input string. This should be improved
-    to sanitize data to remove extra commas, letters, and other invalid input. */
+    to sanitize data by removing extra commas, letters, and other invalid input. */
     var values = d3.select("#numbers").property("value");
     values = values.split(",").map(Number);
 
