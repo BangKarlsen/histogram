@@ -7,7 +7,6 @@ body {
     border-top: 1px solid black;
 }
 .bar rect {
-    /*fill: steelblue;*/
     fill: rgb(192, 212, 17);
     shape-rendering: crispEdges;
 }
