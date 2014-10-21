@@ -1,22 +1,19 @@
-$(updateHistogram());
-$("#numbers").on("keyup", function onKeyup() {
-    updateHistogram();
-});
+'use strict';
 
 function updateHistogram() {
-    var values = getInputData()["values"];
-    var bins = getInputData()["bins"];
-    drawHistogram(values, bins)
+    var inputData = getInputData();
+    drawHistogram(inputData.values, inputData.bins);
 }
 
 function getInputData() {
     /* Simple parsing of the input string. This should be improved
     to sanitize data by removing extra commas, letters, and other invalid input. */
-    var values = d3.select("#numbers").property("value");
-    values = values.split(",").map(Number);
+    var valuesString = d3.select("#numbers").property("value");
+    var values = valuesString.split(",").map(Number);
+    console.log(values);
 
     /* The number of bins in the histogram is currently
-    set to the number of values. Alternatively, a slider could have
+    set to the highest value in the input data. Alternatively, a slider could have
     been shown to let the user control the number of bins. */
     var bins = d3.max(values) + 1;
     return {
@@ -96,3 +93,8 @@ function drawHistogram(values, bins) {
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis);
 }
+
+$(updateHistogram());
+$("#numbers").on("keyup", function onKeyup() {
+    updateHistogram();
+});
