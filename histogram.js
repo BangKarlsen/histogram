@@ -10,7 +10,6 @@ function getInputData() {
     to sanitize data by removing extra commas, letters, and other invalid input. */
     var valuesString = d3.select("#numbers").property("value");
     var values = valuesString.split(",").map(Number);
-    console.log(values);
 
     /* The number of bins in the histogram is currently
     set to the highest value in the input data. Alternatively, a slider could have
@@ -33,9 +32,9 @@ function drawHistogram(values, bins) {
             right: 30,
             bottom: 30,
             left: 30
-        },
-        width = 450 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
+        };
+    var width = 450 - margin.left - margin.right;
+    var height = 400 - margin.top - margin.bottom;
 
     var formatCount = d3.format(",.0f");
 
@@ -95,6 +94,4 @@ function drawHistogram(values, bins) {
 }
 
 $(updateHistogram());
-$("#numbers").on("keyup", function onKeyup() {
-    updateHistogram();
-});
+$("#numbers").on("keyup", updateHistogram);
