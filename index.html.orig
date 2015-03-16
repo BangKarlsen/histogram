@@ -2,11 +2,18 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <title>Histogram</title>
+=======
+    <title>Histogram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+>>>>>>> master
 </head>
 
 <body>
@@ -14,11 +21,19 @@
         <div class="row">
             <h1>Histogram</h1>
         </div>
+<<<<<<< HEAD
         <div class="row spacing"></div>
         <div class="row">
             <div class="col-md-4">
                 <p>Please enter input data in the field below.</p>
                 <input id="numbers" value="0, 2, 14, 6, 8"/>
+=======
+        <div class="row spacing" />
+        <div class="row">
+            <div class="col-md-4">
+                <p>Please enter input data in the field below.</p>
+                <input id="numbers" value="0, 2, 14, 6, 8"></input>
+>>>>>>> master
                 <p>
                     <small>Note, that currently an empty value after a ',' is parsed as a 0.</small>
                 </p>
@@ -29,9 +44,15 @@
         </div>
     </div>
 
+<<<<<<< HEAD
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="histogram.js"></script>
+=======
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="histogram.js"></script>
+>>>>>>> master
 </body>
 
 </html>
